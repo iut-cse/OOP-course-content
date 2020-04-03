@@ -76,6 +76,9 @@
   </main>
 
   <script src="{{ '/assets/js/app.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+  <script>
+    buildAllNavs("{{'/' | absolute_url}}")
+  </script>
 </body>
 
 </html>
