@@ -133,5 +133,38 @@ void growDouble(Rectangle rectangle) {
 > Answer: it violates [OCP](ocp).
 
 ## A better solution
+The problem is occurring due to the misuse of inheritance.
+This case seems to be a good case for an inheritance, but it is not.
+A solution would be using composition in place of inheritance.
+
+```Java
+class Square {
+    private Rectangle wrapped;
+
+    public Square(){
+        wrapped = new Rectangle();
+    }
+
+    public int getLength() {
+        return wrapped.getHeight();
+    }
+
+    public void setLength(int length) {
+        wrapped.setWidth(length);
+        wrapped.setHeight(length);
+    }
+
+    public int area(){
+        return wrapped.area();
+    }
+
+    public String draw() {
+        return wrapped.draw();
+    }
+}
+```
 ## Discussion
+Note that the two solutions are about the same with the following differences
+1. All occurrences of `super` is replaced with `wrapped` in composition
+2. 
 ## Practice problems
