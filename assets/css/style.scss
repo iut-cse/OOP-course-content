@@ -12,6 +12,11 @@
         }
     }
 
+    .site-footer {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
     @media (min-width: 64em) {
         .main-container {
             display: flex;
