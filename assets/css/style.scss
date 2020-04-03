@@ -1,6 +1,5 @@
----
----
-
+--- 
+--- 
 @import "{{ site.theme }}";
 
 @media screen {
@@ -10,6 +9,28 @@
 
         .source-links {
             display: none;
+        }
+    }
+
+    
+    @media (min-width: 64em) {
+        .main-container {
+            display: flex;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            .main-content {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: 0;
+                padding-bottom: 0;
+                width: auto;
+            }
+    
+            .second-nav {
+                
+            }
         }
     }
 }
