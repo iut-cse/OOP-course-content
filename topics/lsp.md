@@ -174,4 +174,38 @@ The problem that occured is a violation of Liskov Substitution Principle (LSP, L
 
 > Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.
 
-## Practice problems
+In the inheritance solution, the `growDouble` method could not use the `Square` subclass of `Rectangle`, hence violating LSP.
+
+### Symptoms reasons of LSP violation
+1. Overriding mutation: Notice that the Square class override the setter methods. Setter methods are responsible for changing the state of the object. Changing state of the object is often called _mutation_. Usually possibility of LSP violation rises if a mutation method is overriden.
+2. Overriding and implementing a completely new behaviour.
+3. Giving an empty implementation of a supertype method, or simply throwing exception.
+
+### Some more violations
+In the code below, `Penguin` class does not implement `fly` method.
+Therefore it is not a proper subtype of `Bird`.
+The code is a violation of LSP.
+
+```java
+// Language: Java
+interface Bird {
+    void walk();
+    void fly();
+}
+
+class Penguin implements Bird {
+    @Override
+    public void walk() {
+        // implement walking
+    }
+
+    @Override
+    public void fly() {
+        throw new UnsupportedOperationException("Penguin cannot fly");
+    }
+}
+```
+
+## Resources
+1. (Circle–ellipse problem)[https://en.wikipedia.org/wiki/Circle%E2%80%93ellipse_problem]
+2. (Examples of LSP violation on Stackoverflow)[https://stackoverflow.com/q/56860/887149]
