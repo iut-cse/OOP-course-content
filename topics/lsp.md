@@ -8,7 +8,7 @@
 There is a Rectangle class which has height and width.
 We can calculate the area of the Rectangle and can generate a string that represents a graphical form of the rectangle. 
 
-```Java
+```java
 // Language: Java
 class Rectangle {
     private int height;
@@ -69,7 +69,7 @@ Now, our software requires a Square class for which we also need to calculate th
 Some students may inheritance as a solution to this problem.
 The solution involves overriding the setters to keep both sides of the Square equal.
 
-```Java
+```java
 // Language: Java
 class Square extends Rectangle {
     @Override
@@ -118,8 +118,8 @@ The code does compile.
 But it behaves unexpectedly when run.
 
 We can solve it by changing the `growDouble` method like below:
-```Java
-Language: Java
+```java
+// Language: Java
 void growDouble(Rectangle rectangle) {
     if (rectangle instanceof Square) {
         rectangle.setWidth(rectangle.getHeight() * 2);
@@ -137,11 +137,11 @@ The problem is occurring due to the misuse of inheritance.
 This case seems to be a good case for an inheritance, but it is not.
 A solution would be using composition in place of inheritance.
 
-```Java
+```java
 class Square {
     private Rectangle wrapped;
 
-    public Square(){
+    public Square() {
         wrapped = new Rectangle();
     }
 
@@ -166,5 +166,12 @@ class Square {
 ## Discussion
 Note that the two solutions are about the same with the following differences
 1. All occurrences of `super` is replaced with `wrapped` in composition
-2. 
+2. Con: The composition solution had to explicitly call the wrapped methods for `area` and `draw`.
+3. Pro: Now there is no separate height and width of Square. It did not make sense in the first place.
+4. Pro & Con: Now we cannot pass square in place of rectangle. This is a con because we _cannot_ do it when it is expected. This is a pro because it is not applicable in all cases, so better get rid of it.
+
+The problem that occured is a violation of Liskov Substitution Principle (LSP, L of SOLID). The formal definition of LSP is:
+
+> Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.
+
 ## Practice problems
