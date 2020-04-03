@@ -5,6 +5,8 @@ class NavItem {
         this.level = level;
     }
     render(container) {
+        var url = this.url;
+
         var anchor = document.createElement("a");
         anchor.setAttribute("href", this.url);
         anchor.innerHTML = this.heading;
@@ -24,11 +26,11 @@ function createNavList(container, itemList) {
     var allTopics = [
         new NavItem("#", "All Topics", 0),
         new NavItem("#", "SOLID", 1),
-        new NavItem("srp", "Single Responsibility Principle", 2),
-        new NavItem("ocp", "Open Closed Principle", 2),
-        new NavItem("lsp", "Liskov Substitution Principle", 2),
-        new NavItem("isp", "Interface Segragation Principle", 2),
-        new NavItem("dip", "Dependency Inversion Principle", 2),
+        new NavItem("/topics/srp", "Single Responsibility Principle", 2),
+        new NavItem("/topics/ocp", "Open Closed Principle", 2),
+        new NavItem("/topics/lsp", "Liskov Substitution Principle", 2),
+        new NavItem("/topics/isp", "Interface Segragation Principle", 2),
+        new NavItem("/topics/dip", "Dependency Inversion Principle", 2),
     ];
 
     var allHeadings = [
