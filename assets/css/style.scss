@@ -1,0 +1,15 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+@media screen {
+    .page-header {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        .source-links {
+            display: none;
+        }
+    }
+}
