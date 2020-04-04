@@ -194,6 +194,12 @@ We will not have to make any changes to `ShapeGroup` class.
 The first solution had violated the _Open Closed Principle_ (OCP, O of Solid) which states:
 > software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.  
 
+Notice that all three downsides of the first solution has disapeared.
+
+### Notes
+1. In the given example, the `ShapeGroup` class is open for extension and closed for modification. This idea needs to be clearly communicated.
+2. OCP, [dynamic polymorphism](polymorphism) and strategy design patterns are the similar concepts, just approached differently. They give a good way of working with _similar objects with different behaviour_. In the strategy pattern, the _context_ is open for extension and closed for modification.
+3. OCP is a very fundamental and extreemly important concept of OOP. OCP compliance of a code makes it extensible and reusable. Make sure that the students have clear understanding of it.
 
 ## Practice
 The students should be able to solve the following problems.
@@ -211,10 +217,13 @@ The students should be able to solve the following problems.
    2. Observe your surroundings for different but of similar types of objects.
    3. Notice how the objects performs similar tasks differently.
 2. Write code to solve your problem. 
+3. Answer - Which class in your problem is open for extension and closed for modification?
 
 **Problem 3**
 1. Get a problem from one or more of your classmates who have completed **Problem 2** above.
 2. Solve their problems.
+3. Answer - Which class in your classmates problem is open for extension and closed for modification?
 
 **Discuss**
-Discuss your problem with other classmets.
+1. Discuss your problem with other classmets.
+2. Argue about which class is OCP compliant.
