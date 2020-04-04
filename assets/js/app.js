@@ -35,6 +35,8 @@ function buildAllNavs(urlRoot){
         new NavItem("topics/lsp", "Liskov Substitution Principle", 2),
         //new NavItem("topics/isp", "Interface Segragation Principle", 2),
         //new NavItem("topics/dip", "Dependency Inversion Principle", 2),
+        new NavItem("", "Advanced Topics", 1),
+        new NavItem("topics/generics", "Generics", 2),
     ];
 
     var allHeadings = [
