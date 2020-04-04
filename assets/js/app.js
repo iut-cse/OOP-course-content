@@ -30,11 +30,11 @@ function buildAllNavs(urlRoot){
     var allTopics = [
         new NavItem("#", "All Topics", 0),
         new NavItem("#", "SOLID", 1),
-        new NavItem("topics/srp", "Single Responsibility Principle", 2),
+        //new NavItem("topics/srp", "Single Responsibility Principle", 2),
         new NavItem("topics/ocp", "Open Closed Principle", 2),
         new NavItem("topics/lsp", "Liskov Substitution Principle", 2),
-        new NavItem("topics/isp", "Interface Segragation Principle", 2),
-        new NavItem("topics/dip", "Dependency Inversion Principle", 2),
+        //new NavItem("topics/isp", "Interface Segragation Principle", 2),
+        //new NavItem("topics/dip", "Dependency Inversion Principle", 2),
     ];
 
     var allHeadings = [
