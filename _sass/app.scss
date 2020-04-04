@@ -16,6 +16,7 @@
     @media (min-width: 64em) {
         .main-container {
             display: flex;
+            justify-content: center;
             padding-left: 1rem;
             padding-right: 1rem;
             padding-top: 2rem;
@@ -28,6 +29,7 @@
                 padding-bottom: 0;
                 margin: unset;
                 flex-grow: 1;
+                font-size: 1rem;
             }
 
             .navigation {
