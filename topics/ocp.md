@@ -189,4 +189,32 @@ class ShapeGroupTest {
 ```
 
 ## Discussion
-## Practice problems
+With the new solution, in order to introduce a new type of regular shape, all we need to do is to create a subtype of the `RegularShape` interface.
+We will not have to make any changes to `ShapeGroup` class.
+The first solution had violated the _Open Closed Principle_ (OCP, O of Solid) which states:
+> software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.  
+
+
+## Practice
+The students should be able to solve the following problems.
+
+**Problem 1**  
+1. Introduce a `RegularPentagon` class in the system.
+2. Add a test case and assert that the total perimeter is 21 for:
+   - 1 pentagon of side = 2
+   - 1 triangle of size = 3  
+3. Make sure that your do not make any change in the `ShapeGroup` class.
+
+**Problem 2**  
+1. Write a problem in that should comply with OCP. 
+   1. Do not search on the Internet or book. 
+   2. Observe your surroundings for different but of similar types of objects.
+   3. Notice how the objects performs similar tasks differently.
+2. Write code to solve your problem. 
+
+**Problem 3**
+1. Get a problem from one or more of your classmates who have completed **Problem 2** above.
+2. Solve their problems.
+
+**Discuss**
+Discuss your problem with other classmets.
