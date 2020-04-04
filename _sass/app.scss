@@ -12,6 +12,11 @@
         }
     }
 
+    .main-content {
+        h1 {
+            border-bottom: 1px solid $section-headings-color;
+        }
+    }
     .site-footer {
         text-align: center;
         margin-bottom: 2rem;
@@ -64,6 +69,10 @@
                 font-weight: bold;
                 font-size: 20px;
                 border-bottom: 1px solid $section-headings-color;
+            }
+
+            li.level-1 {
+                font-weight: bold;
             }
 
             li.level-2 {
